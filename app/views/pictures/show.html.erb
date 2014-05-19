@@ -1,5 +1,7 @@
 <h1>Picture Details</h1>
 
-  <img src="<%= @picture_images.source %>" width=300>
-  <p> <%= @picture_images.caption %> </p>
+<a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
+
+  <img src="<%= @picture.source %>" width=300>
+  <p> <%= @picture.caption %> </p>
 

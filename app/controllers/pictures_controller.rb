@@ -1,7 +1,7 @@
 class PicturesController < ApplicationController
 
   def show
-    @picture_images = Picture.find_by({ :id => params[:id] })
+    @picture = Picture.find_by({ :id => params[:id] })
   end
 
   def index
@@ -20,4 +20,9 @@ class PicturesController < ApplicationController
     redirect_to("http://localhost:3000/all_pictures")
   end
 
+  def destroy
+    picture = Picture.find(params[:id])
+    picture.destroy
+    redirect_to("http://localhost:3000/all_pictures")
+  end
 end

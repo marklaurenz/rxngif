@@ -1,0 +1,9 @@
+<h1>All Pictures</h1>
+
+<% Picture.all.each do |pic| %>
+
+<li>
+  <img src="<%= pic.source %>" width=200>
+</li>
+
+<% end %>

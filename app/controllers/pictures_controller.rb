@@ -11,12 +11,12 @@ class PicturesController < ApplicationController
   end
 
   def create
-    Picture.all.each do |pic|
+    # Picture.all.each do |pic|
       p = Picture.new
-      p.source = pic[:source]
-      p.caption = pic[:caption]
+      p.source = params[:source]
+      p.caption = params[:caption]
       p.save
-      end
+      # end
     redirect_to("http://localhost:3000/all_pictures")
   end
 
